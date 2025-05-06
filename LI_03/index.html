@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transactions App</title>
+    <link rel="stylesheet" type="text/css" href="style.css" title="MyStyleSheet">
+</head>
+<body>
+<h1>Transactions:</h1>
+<div class="transactions_table">
+<table id="transactions_table" style="border: 1px solid black; border-collapse: collapse; text-align: center; width: 100%;">
+    <tr>
+        <th style="border: 3px solid black; border-collapse: collapse; background-color:lightblue;">ID</th>
+        <th style="border: 3px solid black; border-collapse: collapse; background-color:lightblue;">Date</th>
+        <th style="border: 3px solid black; border-collapse: collapse; background-color:lightblue;">Category</th>
+        <th style="border: 3px solid black; border-collapse: collapse; background-color:lightblue;">Description</th>
+        <th style="border: 3px solid black; border-collapse: collapse; background-color:lightblue;">Action</th>
+    </tr>
+</table></div>
+
+
+<div class="transactions_details">
+    <fieldset>
+        <legend><b>Transaction Details:</b></legend>
+        <table>
+            <tr>
+                <td>ID:</td>
+                <td id="details_id"></td>
+            </tr>
+            <tr>
+                <td>Date:</td>
+                <td id="details_date"></td>
+            </tr>
+            <tr>
+                <td>Amount:</td>
+                <td id="details_amount"></td>
+            </tr>
+            <tr>
+                <td>Category:</td>
+                <td id="details_category"></td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td id="details_description"></td>
+            </tr>
+        </table>
+    </fieldset>
+</div>
+
+
+<div class="transactions_form">
+    <form>
+        <fieldset>
+            <legend><b>New Transaction</b></legend>
+            <table>
+  
+      <tr><td><input type="date" name="transaction_date" id="transaction_date" placeholder="Transaction date.." required></td></tr>
+  
+      <tr><td><input type="text" name="transction_amount" id="transaction_amount" placeholder="Transaction amount.." required></td></tr>
+  
+      <tr><td><select name="transaction_category" id="transaction_category" placeholder="Transaction category.." required>
+                        <option>Expenses</option>
+                        <option>Income</option></select></td></tr>
+  
+        <tr><td><textarea name="transaction_description" id="transaction_description" placeholder="Transaction description.." style="height:100px" maxlength="40" required></textarea></td></tr>
+  
+        <tr><td><input type="submit" id="transaction_submit" value="Submit"></td></tr>
+  
+            </table>
+        </fieldset>
+    </form>
+  </div>
+
+
+<h3>TOTAL AMOUNT:</h3>
+<i id="totalAmount"></i>
+
+
+<script type="module" src="./script.js"></script>
+</body>
+</html>
